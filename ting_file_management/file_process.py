@@ -1,16 +1,16 @@
 from ting_file_management.file_management import txt_importer
+import sys
 
 
 def process(path_file, instance):
     for item in range(len(instance)):
         if instance.search(item)['nome_do_arquivo'] == path_file:
             return None
-    file = txt_importer(path_file)
-    if file:
+    if txt_importer(path_file):
         data = {
             'nome_do_arquivo': path_file,
-            'qtd_linhas': len(file),
-            'linhas_do_arquivo': file
+            'qtd_linhas': len(txt_importer(path_file)),
+            'linhas_do_arquivo': txt_importer(path_file)
         }
     instance.enqueue(data)
     print(data)
@@ -25,4 +25,8 @@ def remove(instance):
 
 
 def file_metadata(instance, position):
-    """Aqui irá sua implementação"""
+    try:
+        instance = instance.search(position)
+        return print(instance)
+    except IndexError:
+        return print('Posição inválida', instance = sys.stderr)
