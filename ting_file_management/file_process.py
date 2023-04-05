@@ -4,7 +4,7 @@ from ting_file_management.file_management import txt_importer
 def process(path_file, instance):
     for item in range(len(instance)):
         if instance.search(item)['nome_do_arquivo'] == path_file:
-           None
+            None
     file = txt_importer(path_file)
     if file:
         data = {
