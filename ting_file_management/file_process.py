@@ -23,5 +23,6 @@ def remove(instance):
             f"Arquivo {instance['nome_do_arquivo']} removido com sucesso")
     return print('Não há elementos')
 
+
 def file_metadata(instance, position):
     """Aqui irá sua implementação"""
