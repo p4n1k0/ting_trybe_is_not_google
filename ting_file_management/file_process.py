@@ -17,7 +17,6 @@ def process(path_file, instance):
 
 
 def remove(instance):
-    """Aqui irá sua implementação"""
     instance = instance.dequeue()
     if not instance:
         return print('Não há elementos')
