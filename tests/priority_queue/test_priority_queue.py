@@ -4,7 +4,7 @@ import pytest
 
 def test_basic_priority_queueing():
     mock = [{'qtd_linhas': 7}, {'qtd_linhas': 6}, {'qtd_linhas': 1},
-        {'qtd_linhas': 2}, {'qtd_linhas': 3}]
+        {'qtd_linhas': 2}, {'qtd_linhas': 3},]
 
     p_queue = PriorityQueue()
 
@@ -15,7 +15,8 @@ def test_basic_priority_queueing():
 
     assert p_queue.search(2) == mock[4]
     assert p_queue.search(3) == mock[1]
-    with pytest.raises(IndexError):p_queue.search(10)
+    with pytest.raises(IndexError):
+        p_queue.search(10)
 
     assert p_queue.dequeue() == mock[2]
     assert p_queue.dequeue() == mock[3]
