@@ -12,5 +12,6 @@ def exists_word(word, instance):
         }]
     return occurrences
 
+
 def search_by_word(word, instance):
     """Aqui irá sua implementação"""
