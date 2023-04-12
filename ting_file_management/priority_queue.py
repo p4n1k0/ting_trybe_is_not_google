@@ -9,7 +9,7 @@ class PriorityQueue(AbstractQueue):
         self.priority_limit = 5
 
     def is_priority(self, value):
-        return value["qtd_linhas"] < self.priority_limit
+        return value['qtd_linhas'] < self.priority_limit
 
     def __len__(self):
         return len(self.high_priority) + len(self.regular_priority)
@@ -23,7 +23,6 @@ class PriorityQueue(AbstractQueue):
     def dequeue(self):
         if len(self.high_priority):
             return self.high_priority.dequeue()
-
         return self.regular_priority.dequeue()
 
     def search(self, index):
