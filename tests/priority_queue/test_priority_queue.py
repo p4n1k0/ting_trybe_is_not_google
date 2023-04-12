@@ -4,7 +4,7 @@ import pytest
 
 def test_basic_priority_queueing():
     mock = [{'qtd_linhas': 7}, {'qtd_linhas': 6}, {'qtd_linhas': 1},
-        {'qtd_linhas': 2}, {'qtd_linhas': 3}, ]
+            {'qtd_linhas': 2}, {'qtd_linhas': 3}, ]
 
     p_queue = PriorityQueue()
 
